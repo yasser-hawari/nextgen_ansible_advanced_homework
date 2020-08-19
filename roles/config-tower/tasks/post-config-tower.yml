@@ -1,18 +1,18 @@
 - name: Create Homework Assignment project
   tower_project:
-    name: "00_Homework Assignment"
-    description: "3 tier project - ref project"
+    name: "{{proj_name}}"
+    description: "{{proj_name}} Project"
     organization: "Default"
     state: present
     tower_host: tower1.{{tower_GUID}}.example.opentlc.com
     tower_username: admin
     tower_password: r3dh4t1!
     tower_verify_ssl: no
-    scm_branch: "assignment"
+    scm_branch: "{{scm_branch}}"
     scm_type: git
     scm_update_on_launch: yes 
     scm_clean: yes 
-    scm_url: https://github.com/yasser-hawari/good-ansible.git
+    scm_url: "{{scm_url}}"
 
 - name: Machine Credentail to connect to workstation using openstack.pub
   tower_credential:
