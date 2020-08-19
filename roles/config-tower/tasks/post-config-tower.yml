@@ -1,7 +1,7 @@
 - name: Create Homework Assignment project
   tower_project:
     name: "{{proj_name}}"
-    description: "{{proj_name}} Project"
+    description: "{{proj_name}} - Three tier app project"
     organization: "Default"
     state: present
     tower_host: tower1.{{tower_GUID}}.example.opentlc.com
