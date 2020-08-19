@@ -1,5 +1,5 @@
-- hosts: localhost
-  connection: local
+- hosts: workstation
+  # connection: local
   become: no
   gather_facts: true
   roles:
