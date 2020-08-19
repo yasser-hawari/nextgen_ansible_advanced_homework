@@ -1,2 +1,2 @@
 ---
-- debug: msg: "Installing postgresql"
+- debug: msg="Installing postgresql"
