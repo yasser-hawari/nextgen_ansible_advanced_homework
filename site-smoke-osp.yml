@@ -13,7 +13,7 @@
 
     # we have a single LB server, picking the 1st is fine 
   - name: Curl website
-    action: uri url="http://{{ result.openstack_servers[0].public_v4 }}" return_content=yes
+    action: uri url="http://{{ result.openstack_servers[0].public_v4 }}" timeout=60 return_content=yes
     register: webpage 
 
   - name: Fail if 'Ansible has done its job' is not in the page content
