@@ -1,9 +1,16 @@
+== MitziCom - three-tier Application CICD
+
+==== Summary 
+
+The project contians playbooks to provision and deploy QA and Production environments. 
+
+QA environment is designed to be provisioned and deployed in an OpenStak environment. 
+
+Production environment is provisioned on AWS environment via `order_svc.sh` script.  
+
 ==== Ansible Tower Config
 
-
 * From the cloned repo run `site-config-tower.yml` playbook to create job templates and workflow template.
-
-
 
 .List of Playbooks
 [%header,cols=2*]

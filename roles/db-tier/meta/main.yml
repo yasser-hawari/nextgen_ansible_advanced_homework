@@ -1,3 +1,19 @@
 ---
 dependencies:
   - { role: geerlingguy.postgresql }
+
+
+galaxy_info:
+  author: yasser-hawari
+  description: "Utilized geerlingguy.postgresql to install postgres. This Role adds three-tier-app specific postgres preparation"
+  company: "SomeFictitious Company"
+  license: "license (BSD, MIT)"
+  min_ansible_version: 2.0
+  platforms:
+    - name: RHEL
+      versions:
+      - 7
+      - 8
+  galaxy_tags:
+    - three-tier-app
+    - db-tier

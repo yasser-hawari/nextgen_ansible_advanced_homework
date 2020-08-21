@@ -3,7 +3,7 @@ dependencies: []
 
 galaxy_info:
   author: yasser-hawari
-  description: "Installs tomcat servers on targeted hosts and configures the application/pages"
+  description: "Prepares the host with the required repo details and libraries."
   company: "SomeFictitious Company"
   license: "license (BSD, MIT)"
   min_ansible_version: 2.0
@@ -14,4 +14,4 @@ galaxy_info:
       - 8
   galaxy_tags:
     - three-tier-app
-    - app-tier
+    - base-config

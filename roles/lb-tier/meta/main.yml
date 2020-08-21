@@ -1,2 +1,17 @@
 ---
 dependencies: []
+
+galaxy_info:
+  author: yasser-hawari
+  description: "Installs and configure HAProxy as a load balancer to app-tier backends."
+  company: "SomeFictitious Company"
+  license: "license (BSD, MIT)"
+  min_ansible_version: 2.0
+  platforms:
+    - name: RHEL
+      versions:
+      - 7
+      - 8
+  galaxy_tags:
+    - three-tier-app
+    - lb-tier
