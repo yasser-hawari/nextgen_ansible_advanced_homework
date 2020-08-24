@@ -1,5 +1,7 @@
 - hosts: tag_AnsibleGroup_bastions
   gather_facts: true
+  vars_files:
+    - vault.yml
   become: true
   tasks:
   - name: Install required packages 
@@ -26,7 +28,7 @@
       kind: ssh
       tower_host: tower1.{{tower_guid}}.example.opentlc.com
       tower_username: admin
-      tower_password: r3dh4t1!
+      tower_password: "{{ vault_tower_admin_password }}"
       tower_verify_ssl: no
       ssh_key_data: "/root/.ssh/{{ file_to_copy.stdout }}"
       username: ec2-user
@@ -36,7 +38,7 @@
       credential: "Creds for AWS instances"
       tower_host: tower1.{{tower_guid}}.example.opentlc.com
       tower_username: admin
-      tower_password: r3dh4t1!
+      tower_password: "{{ vault_tower_admin_password }}"
       tower_verify_ssl: no
       state: present
       job_type: run
@@ -48,7 +50,7 @@
       credential: "Creds for AWS instances"
       tower_host: tower1.{{tower_guid}}.example.opentlc.com
       tower_username: admin
-      tower_password: r3dh4t1!
+      tower_password: "{{ vault_tower_admin_password }}"
       tower_verify_ssl: no
       state: present
       job_type: run

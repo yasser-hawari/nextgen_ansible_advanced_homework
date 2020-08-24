@@ -1,2 +1,3 @@
 ---
 # vars file for setup-workstation
+tower_password: {{ vault_tower_admin_password }}

@@ -6,7 +6,7 @@
     state: present
     tower_host: tower1.{{tower_GUID}}.example.opentlc.com
     tower_username: admin
-    tower_password: r3dh4t1!
+    tower_password: "{{ password }}"
     tower_verify_ssl: no
     scm_branch: "{{scm_branch}}"
     scm_type: git
@@ -22,7 +22,7 @@
     kind: ssh
     tower_host: tower1.{{tower_GUID}}.example.opentlc.com
     tower_username: admin
-    tower_password: r3dh4t1!
+    tower_password: "{{ password }}"
     ssh_key_data: "/root/.ssh/openstack.pem"
     username: cloud-user
 
@@ -43,7 +43,7 @@
     state: present
     tower_host: tower1.{{tower_GUID}}.example.opentlc.com
     tower_username: admin
-    tower_password: r3dh4t1!
+    tower_password: "{{ password }}"
     tower_verify_ssl: no
 
 - name: Associate workstation host to group 
@@ -59,7 +59,7 @@
     kind: ssh
     tower_host: tower1.{{tower_GUID}}.example.opentlc.com
     tower_username: admin
-    tower_password: r3dh4t1!
+    tower_password: "{{ password }}"
     tower_verify_ssl: no
     ssh_key_data: /root/.ssh/mykey.pem
     username: "{{ opentlc_login }}"
