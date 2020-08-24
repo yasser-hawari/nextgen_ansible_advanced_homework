@@ -17,6 +17,9 @@
         #!/bin/bash
         curl -o /tmp/openstack.pub http://www.opentlc.com/download/ansible_bootcamp/openstack_keys/openstack.pub
         cat /tmp/openstack.pub >> /home/cloud-user/.ssh/authorized_keys
+        if [[ -n "{{ additionalAuthorizedPublicKey }}" ]]; then
+          cat {{ additionalAuthorizedPublicKey }} >> /home/cloud-user/.ssh/authorized_keys
+        fi
     with_subelements:
       - "{{osp_servers}}"
       - meta

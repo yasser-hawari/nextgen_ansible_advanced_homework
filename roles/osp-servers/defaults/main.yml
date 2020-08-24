@@ -1,2 +1,5 @@
 ---
 # defaults file for osp.servers
+
+# Additional public key to add to 'authorized_keys' when provisioning OS servers 
+additionalAuthorizedPublicKeyFileLocation: ""
